@@ -73,7 +73,7 @@ If this pilot demonstrates feasibility, planned next steps include a larger scen
 
 ## Citing this work
 
-> Deane-Taylor B. C-MAIR: Caribbean Medical AI Adaptation and Implementation Research — Pilot Study Protocol. 2026. https://github.com/[username]/c-mair
+> Deane-Taylor B. C-MAIR: Caribbean Medical AI Adaptation and Implementation Research — Pilot Study Protocol. 2026. https://github.com/brittanydeane1/C-MAIR
 
 ## Contact
 
