@@ -40,18 +40,24 @@ Three frontier models were evaluated: **GPT 5.5**, **Claude Opus 4.8**, and **Ge
 
 Responses were generated on **5 July 2026** through each model's **consumer chat interface**, using identical prompt text for every model. One response per model per scenario was captured verbatim (15 responses total).
 
-Two points are documented here for transparency:
+**Why consumer interfaces and a single sample — a design decision, not a compromise.** The unit of analysis in this study is not "how does a given model perform on average." It is *what a physician actually receives when they ask once*. A registrar on call at 2am, managing an unstable patient, opens the app already on their phone, types the question once, and acts on the answer they get. They do not query an API, they do not set a temperature, and they do not regenerate three times and compare. Any design that averaged across repeated samples would measure something no clinician ever experiences.
 
-- **Consumer interfaces expose no inference controls.** Temperature, sampling parameters, and true system prompts cannot be set in consumer apps. The prompt included an instruction requesting deterministic, consistent output, but prompt-level instructions cannot enforce reproducible generation. The captured responses are single samples.
-- **Why consumer interfaces anyway.** This was a deliberate choice, not a shortcut. Physicians in Trinidad and Tobago who use these tools use them through the consumer apps — not the developer API. Evaluating the models as clinicians actually encounter them is the ecologically valid choice for a study about real-world clinical usability. A future study may add version-pinned API generation as a comparison arm; see [limitations_and_ethics.md](limitations_and_ethics.md).
+Evaluating the models as clinicians encounter them — same interfaces, same defaults, one answer, one time — is therefore the design that matches the research question. It carries consequences that are stated plainly:
+
+- **No inference control.** Consumer interfaces expose no temperature setting, no sampling parameters, and no true system prompt. The prompt included an instruction requesting deterministic, consistent output; prompt-level instructions cannot enforce this. The captured responses are single draws from stochastic systems.
+- **No version pinning, and therefore limited claim scope.** Consumer-facing models are updated continuously without public version identifiers. These responses document what these interfaces returned on 5 July 2026. They support statements about what a physician would have received on that date; they do not support general claims about how any named model behaves. See [limitations_and_ethics.md](limitations_and_ethics.md).
+
+A future study may add version-pinned API generation with repeated sampling as a **separate comparison arm**, answering a different question — model capability rather than delivered clinical utility.
 
 ## Reference standards
 
-For each scenario, a **Case Reference Standard** defines the principal diagnosis, non-negotiable management steps, a safety trap, the resource constraints in play, and the contextual elements a well-adapted response should use.
+For each scenario, a **Case Reference Standard** sets out the principal diagnosis, the core management elements the reference panel anticipated, a safety trap, the resource constraints in play, and the contextual details a well-adapted response should use.
 
 Two senior physicians independently reviewed each scenario, reference standard, and the scoring rubric. Points of disagreement or ambiguity were discussed until consensus was reached, and ambiguities identified during this process were recorded as explicit "ambiguity flags" within each reference standard rather than hidden. The finalized standards were then adopted for calibration and formal scoring.
 
-We use the term *reference standard* rather than *gold standard* deliberately: these documents encode expert consensus, including judgment calls, and expert consensus can be wrong. This is acknowledged as a limitation in [limitations_and_ethics.md](limitations_and_ethics.md).
+**These are reference expectations, not answer keys.** The distinction is deliberate and material to how scoring works. The listed elements represent what an experienced local panel expected a strong response to contain; they are neither exhaustive nor exclusive. A response that takes a different but clinically sound approach is not deficient, and evaluators are instructed not to treat a missing listed element as an automatic deduction — only as a prompt to consider whether something clinically important is genuinely absent. The alternative — scoring responses against a fixed content checklist — would measure agreement with the panel's practice preferences rather than clinical quality, particularly for management steps that reflect sensible local practice rather than universal standards.
+
+The term *reference standard* is used throughout rather than *gold standard* for the same reason: these documents encode expert consensus, including judgment calls, and expert consensus can be wrong. See [limitations_and_ethics.md](limitations_and_ethics.md).
 
 ## The evaluators
 
