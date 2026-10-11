@@ -11,7 +11,7 @@ C-MAIR's pilot is an exploratory, fully crossed feasibility study: **3 models ×
 The study proceeds in three phases:
 
 1. **Instrument development (completed).** Scenario writing, reference-standard development, rubric drafting, and calibration material creation.
-2. **Evaluation (in progress).** Ten physicians independently score all fifteen model responses. Target completion: September 2026.
+2. **Evaluation (in progress).** Ten physicians independently score all fifteen model responses. Target completion: December 2026 (revised from September 2026; see [CHANGELOG](../CHANGELOG.md)).
 3. **Analysis (pending).** Reliability and feasibility analysis per the locked [analysis plan](analysis_plan.md).
 
 ## The clinical scenarios
