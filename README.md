@@ -2,7 +2,7 @@
 
 **Caribbean Medical AI Adaptation and Implementation Research**
 
-> **Status: Pilot study in progress.** Physician evaluation is underway, with scoring targeted for completion in September 2026. Results will be added to this repository when analysis is complete. Until then, this repository serves as the public record of the study protocol and instruments.
+> **Status: Pilot study in progress.** Physician scoring is ongoing (4 of 10 evaluators complete as of October 2026). The original September 2026 target was revised to December 2026; see the 2026-10-06 timeline amendment in the [CHANGELOG](CHANGELOG.md). Results will be added when analysis is complete. Until then, this repository serves as the public record of the study protocol and instruments.
 
 C-MAIR is a physician-led research initiative studying how frontier large language models adapt to Caribbean healthcare systems. This repository documents its first pilot study: an evaluation of three frontier models on five internal medicine scenarios set in Trinidad and Tobago's public healthcare system, scored by ten practicing physicians.
 
